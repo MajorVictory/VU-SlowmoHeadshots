@@ -86,14 +86,12 @@ function SlowmoHeadshots:onEngineUpdate(deltaTime, simulationDeltaTime)
 
 	if self.cumulatedTime >= self.slowmoTime then
 		self.cumulatedTime = -1
-		print('vu.timeScale: '..self.normalTimeScale)
 		RCON:SendCommand('vu.timeScale', {tostring(self.normalTimeScale)})
 	end
 end
 
 function SlowmoHeadshots:onPlayerKilled(player, inflictor, position, weapon, isRoadKill, isHeadShot, wasVictimInReviveState, info)
 	if isHeadShot then
-		print('vu.timeScale: '..self.slowmoTimeScale)
 		RCON:SendCommand('vu.timeScale', {tostring(self.slowmoTimeScale)})
 		self.cumulatedTime = 0
 	end
