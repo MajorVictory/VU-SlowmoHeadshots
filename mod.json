@@ -1,0 +1,11 @@
+{
+    "Name": "Slowmo Headshots",
+    "Description": "Change the server timescale when someone gets a headshot (Inspired by sgt.samples)",
+    "Version": "1.0.0",
+    "Authors": [ "sgt.samples", "MajorVictory87", "FlashHit" ],
+    "HasVeniceEXT": true,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    },
+    "Tags": [ "slowmo-hs" ]
+}
